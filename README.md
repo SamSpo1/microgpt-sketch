@@ -19,7 +19,7 @@ This implementation of microgpt is taken directly from microgpt (https://gist.gi
 ## Code Organization
 
 All of the code for training and forward-mode differentiation is in `src`:
-- `microgpt.py` is the code of Karpathy's, with the modifications above;
+- `microgpt.py` is Karpathy's code, with the modifications above;
 - `polys.py` contains polynomial arithmetic;
 - `autograd_real.py` and `autograd_poly.py` implement automatic differentiation with float and polynomial objects, respectively.
 
