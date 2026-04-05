@@ -1,0 +1,6 @@
+__pycache__
+.venv
+data/fig*
+local_*
+.DS_Store
+
