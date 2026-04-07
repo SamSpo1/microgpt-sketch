@@ -1,5 +1,3 @@
-# Overview
-
 Code for the paper "How to sketch a learning algorithm." See Section 5.2 for context.
 
 ## Requirements
