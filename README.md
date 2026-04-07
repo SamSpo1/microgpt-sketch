@@ -23,6 +23,4 @@ All of the code for training and forward-mode differentiation is in `src`:
 - `polys.py` contains polynomial arithmetic;
 - `autograd_real.py` and `autograd_poly.py` implement automatic differentiation with float and polynomial objects, respectively.
 
-## Experiments
-
-The `generate_figX.py` scripts perform the experiments, store the data in `data/figX/`, store the results for plotting in `results/`, and generate matplotlib png plots in `results/`. You can then use `figX_data_to_tikz.py` to get tikz code for latex.
+The `generate_figX.py` scripts perform the experiments, store the data (model parameters and random directions) in `data/figX/` and store the results (raw results and PNG figures) in `results/`. You can then use `figX_data_to_tikz.py` to get TikZ code for the LaTeX figures used in the paper.
