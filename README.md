@@ -1,4 +1,4 @@
-Code for the paper "How to sketch a learning algorithm." See Section 5.2 for context.
+Code for the paper "[How to sketch a learning algorithm](https://arxiv.org/pdf/2604.07328)." See Section 5.2 for context.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ pip install matplotlib
 
 ## Changes from Karpathy's microgpt
 
-This implementation is taken directly from microgpt (https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95), with three changes: the code is refactored and updated to handle higher-order forward-mode automatic differentiation with polynomial ring computations, `eps_adam` is inside of the `sqrt` and increased from 1e-8 to 1e-3, and we use GELU instead of ReLU gates.
+This implementation is taken directly from [Karpathy's microgpt](https://gist.github.com/karpathy/8627fe009c40f57531cb18360106ce95), with three changes: the code is refactored and updated to handle higher-order forward-mode automatic differentiation with polynomial ring computations, `eps_adam` is inside of the `sqrt` and increased from 1e-8 to 1e-3, and we use GELU instead of ReLU gates.
 
 ## Code organization
 
