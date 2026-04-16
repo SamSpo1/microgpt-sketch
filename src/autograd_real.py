@@ -22,14 +22,11 @@ class Value:
         other = other if isinstance(other, Value) else Value(other)
         return Value(self.data * other.data, (self, other), (other.data, self.data))
     
-    def tanh(self):
-        t = math.tanh(self.data)
-        return Value(t, (self,), (1 - t * t,))
-
     def gelu(self):
-        c = math.sqrt(2.0 / math.pi)
-        u = c * (self + 0.044715 * (self ** 3))
-        return 0.5 * self * (1.0 + u.tanh())
+        x = self.data
+        phi = 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+        pdf = math.exp(-0.5 * x * x) / math.sqrt(2.0 * math.pi)
+        return Value(x * phi, (self,), (phi + x * pdf,))
 
     def __pow__(self, other): return Value(self.data**other, (self,), (other * self.data**(other-1),))
     def log(self): return Value(math.log(self.data), (self,), (1/self.data,))

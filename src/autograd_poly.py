@@ -47,14 +47,6 @@ class Value:
     def log(self):
         return Value(self.data.log(), (self,), (self.data._inverse_series(),))
 
-    def relu(self):
-        a0 = self._real_const(self.data.coeffs[0], "relu")
-        return Value(self.data.relu(), (self,), (float(a0 > 0),))
-
-    def tanh(self):
-        e2x = (2.0 * self).exp()
-        return (e2x - 1.0) / (e2x + 1.0)
-
     def gelu(self):
         x = self.data
 

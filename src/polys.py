@@ -171,14 +171,6 @@ class Poly:
             out = out + term * inv_fact
         return out * np.exp(a0)
 
-    def relu(self):
-        a0 = self._require_real_const(self.coeffs[0], "relu")
-        return Poly(self.coeffs) if a0 > 0 else Poly(0.0)
-    
-    def tanh(self):
-        e2x = (2 * self).exp()
-        return (e2x - 1) / (e2x + 1)
-
     def gelu(self):
         degree = self.coeffs.size - 1
         a0 = self._require_real_const(self.coeffs[0], "gelu")
